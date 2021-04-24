@@ -7,5 +7,8 @@ target
 **/.project
 **/.idea
 **/.mvn
+**/mvnw
+**/mvnw.cmd
 **/*.iml
 **/bin
+**/.gitignore

@@ -10,3 +10,10 @@ management:
     web:
       exposure:
         include: hystrix.stream
+    jmx:
+      exposure:
+        include: health,info,env,beans
+    health:
+      enabled: true
+    logger:
+      enabled: true

@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: movie-info-service
+server:
+  port: 8082
+
+api:
+  key: f0b344d6bdb49f0b940b358ae3608725
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 5
+    nonSecurePortEnabled: true
+    securePortEnabled: false
+    statusPageUrl: http://localhost:8761/eureka/info
+    healthCheckUrl: http://localhost:8761/eureka/health
+    homePageUrl: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
