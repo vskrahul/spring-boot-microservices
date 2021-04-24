@@ -1,0 +1,10 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: hystrix-turbine
+
+turbine:
+  appConfig: movie-catalog-service,movie-info-service,rating-data-service
+  clusterNameExpression: new String("default")

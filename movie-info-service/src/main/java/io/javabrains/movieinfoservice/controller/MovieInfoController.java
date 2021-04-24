@@ -2,6 +2,7 @@ package io.javabrains.movieinfoservice.controller;
 
 import io.javabrains.movieinfoservice.models.Movie;
 import io.javabrains.movieinfoservice.models.MovieSummary;
+import io.javabrains.movieinfoservice.service.MovieInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,13 +18,12 @@ public class MovieInfoController {
     private String apiKey;
 
     @Autowired
-    private RestTemplate restTemplate;
+    private MovieInfoService movieInfoService;
 
     @RequestMapping("/{movieId}")
     public Movie getMovieInfo(@PathVariable("movieId") String movieId) {
-        MovieSummary movieSummary = restTemplate.getForObject("https://api.themoviedb.org/3/movie/" + movieId + "?api_key=" +  apiKey, MovieSummary.class);
+        MovieSummary movieSummary = this.movieInfoService.movieInfo(movieId);
         return new Movie(movieId, movieSummary.getTitle(), movieSummary.getOverview());
-
     }
 
 }

@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.github.vskrahul</groupId>
-	<artifactId>rating-data-service</artifactId>
+	<artifactId>hystrix-turbine</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>rating-data-service</name>
-	<description>Rating Data MicroService</description>
+	<name>hystrix-turbine</name>
+	<description>Hystrix Turbine Project</description>
 	<properties>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
@@ -47,21 +47,15 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.16.20</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-configuration-processor</artifactId>
-			<optional>true</optional>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 	</dependencies>
-
+	
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
