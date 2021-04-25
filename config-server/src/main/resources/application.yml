@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    config:
+      label: config-server
+      server:
+        git:
+          uri: https://github.com/vskrahul/spring-boot-microservices
+          searchPaths: /microservices-config/{application}
+  application:
+    name: config-server
+
+server:
+  port: 8888
