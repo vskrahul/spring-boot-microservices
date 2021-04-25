@@ -11,6 +11,6 @@ management:
   endpoints:
     web:
       exposure:
-        include: hystrix.stream
+        include: "*"
         
-config: some value        
+config: some value
