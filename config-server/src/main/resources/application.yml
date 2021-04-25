@@ -3,4 +3,11 @@ spring:
     config:
       server:
         git:
-          uri: 
+          uri: https://github.com/vskrahul/spring-boot-microservices.git/microservices-configs/{application}
+          default-lable: config-server
+      bootstrap: true
+  application:
+    name: config-server
+
+server:
+  port: 8888

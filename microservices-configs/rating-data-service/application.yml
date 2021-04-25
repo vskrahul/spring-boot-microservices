@@ -12,3 +12,5 @@ management:
     web:
       exposure:
         include: hystrix.stream
+        
+config: some value        
