@@ -1,11 +1,11 @@
 spring:
   cloud:
     config:
-      label: config-server
       server:
         git:
-          uri: https://github.com/vskrahul/spring-boot-microservices
-          searchPaths: /microservices-config/{application}
+          uri: https://github.com/vskrahul/spring-boot-microservices.git
+          searchPaths: microservices-config/{application}
+      bootstrap: true
   application:
     name: config-server
 
