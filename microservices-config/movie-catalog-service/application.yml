@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: movie-catalog-service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+    jmx:
+      exposure:
+        include: health,info,env,beans
+    health:
+      enabled: true
+    logger:
+      enabled: true
