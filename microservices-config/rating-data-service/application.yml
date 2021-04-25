@@ -13,4 +13,4 @@ management:
       exposure:
         include: "*"
         
-config: some value
+config: some value - changed
