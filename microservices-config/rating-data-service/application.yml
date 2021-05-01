@@ -3,10 +3,6 @@ server:
   tomcat:
     max-threads: 100
 
-spring:
-  application:
-    name: rating-data-service
-
 management:
   endpoints:
     web:
