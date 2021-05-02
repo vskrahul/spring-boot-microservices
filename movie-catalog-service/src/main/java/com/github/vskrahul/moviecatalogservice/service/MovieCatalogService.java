@@ -3,6 +3,7 @@ package com.github.vskrahul.moviecatalogservice.service;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.github.vskrahul.moviecatalogservice.model.CatalogItems;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -31,8 +32,9 @@ public class MovieCatalogService {
         String v = System.getProperty("sun.net.client.defaultConnectTimeout");
     }
 
-    public List<CatalogItem> catalogItems(String userId) {
+    public CatalogItems catalogItems(String userId) {
 
+        CatalogItems items = new CatalogItems();
         UserRating ratings = this.movieRatingClient.getRatings(userId);
 
         log.info("[method=catalogItems] [responseBody={}]", JsonUtil.toJsonString(ratings));
@@ -41,8 +43,8 @@ public class MovieCatalogService {
             Movie m = this.movieInfoClient.getMovie(r.getMovieId());
             return new CatalogItem(m.getName(), m.getDescription(), r.getRating());
         }).collect(Collectors.toList());
-
-        return catalogs;
+        items.setCatalogItems(catalogs);
+        return items;
     }
 
     public Mono<UserRating> monoRatings(String userId) {

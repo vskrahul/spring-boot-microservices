@@ -1,9 +1,9 @@
-package io.javabrains.movieinfoservice.service;
+package com.github.vskrahul.movieinfoservice.service;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
-import io.javabrains.movieinfoservice.models.MovieSummary;
-import io.javabrains.movieinfoservice.util.JsonUtil;
+import com.github.vskrahul.movieinfoservice.models.MovieSummary;
+import com.github.vskrahul.movieinfoservice.util.JsonUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

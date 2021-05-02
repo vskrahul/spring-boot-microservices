@@ -1,4 +1,4 @@
-package io.javabrains.movieinfoservice.models;
+package com.github.vskrahul.movieinfoservice.models;
 
 public class Movie {
     private String movieId;

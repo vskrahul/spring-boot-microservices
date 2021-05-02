@@ -32,18 +32,35 @@ To update the application port or to update other configuration.
 
 ## Architecture
 
-![architecture](architecture.jpg)
+![architecture](README/architecture.jpg)
 
 ## Eureka Server
 
-![eureka-server](eureka.jpg)
+![eureka-server](README/eureka.jpg)
 
 ## Run jMeter
 
-![jmeter_start](jmeter_start.jpg)
+![jmeter_start](README/jmeter_start.jpg)
 
 ## Hystrix Turbine Dashboard
 
-![turbine](turbine.jpg)
+![turbine](README/turbine.jpg)
 
 ## REST Endpoints
+
+Use swagger UI to fetch REST API documentations.
+
+### movie-catalog-service
+http://localhost:8081/swagger-ui.html
+
+![movie-catalog-service](README/swagger-movie-catalog-service.jpg)
+
+### movie-info-service
+http://localhost:8082/swagger-ui.html
+
+![movie-info-service](README/swagger-movie-info-service.jpg)
+
+### rating-data-service
+http://localhost:8083/swagger-ui.html
+
+![rating-data-service](README/swagger-rating-data-service.jpg)

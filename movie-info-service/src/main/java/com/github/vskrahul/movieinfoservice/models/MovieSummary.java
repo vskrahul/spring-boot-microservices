@@ -1,4 +1,4 @@
-package io.javabrains.movieinfoservice.models;
+package com.github.vskrahul.movieinfoservice.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
